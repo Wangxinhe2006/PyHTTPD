@@ -1,0 +1,6 @@
+setup.py
+PyHTTPD.egg-info/PKG-INFO
+PyHTTPD.egg-info/SOURCES.txt
+PyHTTPD.egg-info/dependency_links.txt
+PyHTTPD.egg-info/top_level.txt
+pyhttpd/__init__.py

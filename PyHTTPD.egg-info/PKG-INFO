@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: PyHTTPD
+Version: 0.0.1
+Summary: A simple HTTP server
+Home-page: https://github.com/Wangxinhe2006/PyHTTPD
+Author: Wang XinHe
+Author-email: wang__xin_he@163.com
+License: UNKNOWN
+Description: # PyHTTPD - A simple HTTP server
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
