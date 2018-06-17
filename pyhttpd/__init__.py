@@ -1,6 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-class MyHandler(BaseHTTPRequestHandler):
+class PyHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		try:
 			f = open(self.path[1:], 'r')
@@ -14,7 +14,7 @@ class MyHandler(BaseHTTPRequestHandler):
 
 def main():
 	try:
-		server = HTTPServer(('', 80), MyHandler)
+		server = HTTPServer(('', 80), PyHandler)
 		print('Welcome to the machine...'),
 		print('Press ^C once or twice to quit.')
 		server.serve_forever()
