@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="PyHTTPD",
-    version="0.0.1",
+    version="0.0.2",
     author="汪心禾",
     author_email="wang__xin_he@163.com",
     description="A simple HTTP server",
