@@ -1,9 +1,9 @@
 class ErrorResponse(Exception):
-	pass
+    pass
 
 
 class E403(ErrorResponse):
-	pass
+    pass
 
 class E404(ErrorResponse):
-	pass
+    pass
