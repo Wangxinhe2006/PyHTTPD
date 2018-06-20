@@ -1,21 +1,27 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os.path import abspath
+from .error import *
 
 class PyHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		try:
-			if abspath(self.path[1:]).index(abspath('.')):
-				raise ValueError
-			f = open(self.path[1:], 'r')
+			if abspath(self.path[1:]).find(abspath('.')):
+				raise E403
+			try:
+				f = open(self.path[1:], 'r')
+			except IOError:
+				raise E404
 			self.send_response(200)
 			self.send_header('Content-type', 'text/html')
 			self.end_headers()
 			self.wfile.write(f.read().encode())
 			f.close()
-		except ValueError:
+		except E403:
 			self.send_error(403, 'Forbidden: %s' % self.path)
-		except IOError:
+		except E404:
 			self.send_error(404, 'File Not Found: %s' % self.path)
+		except Exception as e:
+			self.send_error(500, 'Internal Server Error: %s' % str(e))
 
 def main():
 	try:
